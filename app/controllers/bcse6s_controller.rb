@@ -1,5 +1,27 @@
 class Bcse6sController < ApplicationController
 
+  def shiftdown
+    if params[:id].to_i >= 0
+      @bcse6 = Bcse6.find(params[:id])
+      @newbcse6 = Bcse6.find((params[:id].to_i+1).to_s)
+      @newbcse6[:csesubject_id] = @bcse6[:csesubject_id]
+      @newbcse6[:cseteacher_id] = @bcse6[:cseteacher_id]
+      @newbcse6.save
+    end
+    redirect_to bcse6s_path
+  end
+
+  def shiftright
+    if params[:id].to_i >= 0
+      @bcse6 = Bcse6.find(params[:id])
+      @newbcse6 = Bcse6.find((params[:id].to_i+45).to_s)
+      @newbcse6[:csesubject_id] = @bcse6[:csesubject_id]
+      @newbcse6[:cseteacher_id] = @bcse6[:cseteacher_id]
+      @newbcse6.save
+    end
+    redirect_to bcse6s_path
+  end
+
   def reset
     respond_to do |format|
       format.html # reset.html.erb
@@ -11,7 +33,7 @@ class Bcse6sController < ApplicationController
     @no = params[:noofgroups].to_i
     @no = @no*45
     i=0
-    @no.times { 
+    @no.times {
       Bcse6.new{|p| p.id=i }.save
       i+=1
     }

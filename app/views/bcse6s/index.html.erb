@@ -25,6 +25,8 @@
   <%= bcse6.csesubject.nil? ? "-" : bcse6.csesubject.code %>
   (<%= bcse6.cseteacher.nil? ? "-" : bcse6.cseteacher.name %>)
   <%= link_to 'Edit', edit_bcse6_path(bcse6) %>
+  <%= link_to '>', :controller=> 'bcse6s', :action=> 'shiftright', :id=>i-45 %>
+  <%= link_to 'V', :controller=> 'bcse6s', :action=> 'shiftdown',:id=>i-1 %>
 <br/>
   <% i+=1 %>
   <% if i%45==0 %>

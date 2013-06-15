@@ -2,6 +2,8 @@ Nith::Application.routes.draw do
 
   match 'bcse6s/reset' => "bcse6s#reset"
   match 'bcse6s/recreate' => "bcse6s#recreate"
+  match 'bcse6s/right' => "bcse6s#shiftright"
+  match 'bcse6s/down' => "bcse6s#shiftdown"
 
   resources :bcse6s
 
