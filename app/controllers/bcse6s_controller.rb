@@ -10,7 +10,12 @@ class Bcse6sController < ApplicationController
     Bcse6.delete_all
     @no = params[:noofgroups].to_i
     @no = @no*45
-    @no.times { Bcse6.new.save }
+    i=0
+    @no.times { 
+      Bcse6.new{|p| p.id=i }.save
+      i+=1
+    }
+
   end
 
   # GET /bcse6s
