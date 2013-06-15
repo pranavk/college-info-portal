@@ -15,7 +15,7 @@ class Bcse6sController < ApplicationController
       Bcse6.new{|p| p.id=i }.save
       i+=1
     }
-
+    redirect_to bcse6s_path
   end
 
   # GET /bcse6s
