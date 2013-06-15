@@ -25,7 +25,7 @@ class Bcse6sController < ApplicationController
     @no = Bcse6.all.count.to_i
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render :json => @bcse6s }
+      format.json { render :json => @bcse6s, :except=>[:created_at,:updated_at] }
     end
   end
 

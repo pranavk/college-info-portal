@@ -6,7 +6,7 @@ class CsesubjectsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render :json => @csesubjects }
+      format.json { render :json => @csesubjects, :except=> [:updated_at,:created_at] }
     end
   end
 
