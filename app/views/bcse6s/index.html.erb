@@ -1,10 +1,10 @@
-<h1>Listing bcse6s</h1>
+<h1><u>Time Table for B.Tech CSE 6th Semester</u></h1>
 
 
 <% day=['Monday','Tuesday','Wednesday','Thursday','Friday'] %>
 <% timings=['8:30 to 9:25','9:25 to 10:20', '10:20 to 11:15','11:15 to
    12:10','12:10 to 1:05','1:05 to 2:00','2:00 to 2:55','2:55 to 3:50','3:50 to 4:45'] %>
-<div style="float: left;">
+<div style="float: left; padding: 20px">
 <% (0..44).each do |i| %>
 <% if i%9==0 %>
 <h1>Timings</h1>
@@ -16,7 +16,7 @@
 
 </div>
 
-<div style="float: left;">
+<div style="float: left; padding: 20px">
 <% i=0 %>
   <% @bcse6s.each do |bcse6| %>
   <% if i%9==0 %>
@@ -30,7 +30,7 @@
   <% if i%45==0 %>
 </div>
 <% if i!=@no %>
-<div style = "float:left">
+<div style = "float:left; padding: 20px">
   <% end %>
   <% end %>
 
