@@ -1,0 +1,29 @@
+<h1>Listing cseteachers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Photo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cseteachers.each do |cseteacher| %>
+  <tr>
+    <td><%= cseteacher.name %></td>
+    <td><%= cseteacher.email %></td>
+    <td><%= cseteacher.phone %></td>
+    <td><%= cseteacher.photo %></td>
+    <td><%= link_to 'Show', cseteacher %></td>
+    <td><%= link_to 'Edit', edit_cseteacher_path(cseteacher) %></td>
+    <td><%= link_to 'Destroy', cseteacher, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cseteacher', new_cseteacher_path %>

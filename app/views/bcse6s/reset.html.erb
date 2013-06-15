@@ -1,0 +1,7 @@
+Enter the no. of groups you want the time table to create space for :
+
+<%= form_tag('/bcse6s/recreate') do %>
+<%= text_field_tag :noofgroups, nil, :placeholder => "Enter no. of groups here"
+%>
+<%= submit_tag "Recreate time table" %>
+<% end %>

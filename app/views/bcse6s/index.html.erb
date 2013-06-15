@@ -1,0 +1,43 @@
+<h1>Listing bcse6s</h1>
+
+
+<% day=['Monday','Tuesday','Wednesday','Thursday','Friday'] %>
+<% timings=['8:30 to 9:25','9:25 to 10:20', '10:20 to 11:15','11:15 to
+   12:10','12:10 to 1:05','1:05 to 2:00','2:00 to 2:55','2:55 to 3:50','3:50 to 4:45'] %>
+<div style="float: left;">
+<% (0..44).each do |i| %>
+<% if i%9==0 %>
+<h1>Timings</h1>
+<% end %>
+<%= timings[i%9] %>
+<br/>
+
+<% end %>
+
+</div>
+
+<div style="float: left;">
+<% i=0 %>
+  <% @bcse6s.each do |bcse6| %>
+  <% if i%9==0 %>
+  <h1><%= day[(i%45)/9] %></h1>
+  <% end %>
+  <%= bcse6.csesubject.nil? ? "-" : bcse6.csesubject.code %>
+  (<%= bcse6.cseteacher.nil? ? "-" : bcse6.cseteacher.name %>)
+  <%= link_to 'Edit', edit_bcse6_path(bcse6) %>
+<br/>
+  <% i+=1 %>
+  <% if i%45==0 %>
+</div>
+<% if i!=@no %>
+<div style = "float:left">
+  <% end %>
+  <% end %>
+
+  <% end %>
+
+  <br />
+<div style="clear: both">
+  <%= link_to 'New Bcse6', new_bcse6_path %>
+  <%= link_to 'Reset all', :controller => 'bcse6s', :action => 'reset' %>
+</div>

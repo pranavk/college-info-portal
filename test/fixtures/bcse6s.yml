@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  csesubject_id: 1
+  cseteacher_id: 1
+
+two:
+  csesubject_id: 1
+  cseteacher_id: 1

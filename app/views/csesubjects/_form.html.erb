@@ -1,0 +1,37 @@
+<%= form_for(@csesubject) do |f| %>
+  <% if @csesubject.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@csesubject.errors.count, "error") %> prohibited this csesubject from being saved:</h2>
+
+      <ul>
+      <% @csesubject.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :code %><br />
+    <%= f.text_field :code %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :lecture %><br />
+    <%= f.number_field :lecture %>
+  </div>
+  <div class="field">
+    <%= f.label :tutorial %><br />
+    <%= f.number_field :tutorial %>
+  </div>
+  <div class="field">
+    <%= f.label :practical %><br />
+    <%= f.number_field :practical %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

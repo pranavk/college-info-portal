@@ -1,0 +1,25 @@
+<%= form_for(@bcse6) do |f| %>
+  <% if @bcse6.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bcse6.errors.count, "error") %> prohibited this bcse6 from being saved:</h2>
+
+      <ul>
+      <% @bcse6.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :csesubject_id %><br />
+<%= f.collection_select :csesubject_id, Csesubject.all, :id, :code, :include_blank => "---" %>
+  </div>
+  <div class="field">
+    <%= f.label :cseteacher_id %><br />
+    <%= f.collection_select :cseteacher_id, Cseteacher.all, :id, :name, :include_blank => "---" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

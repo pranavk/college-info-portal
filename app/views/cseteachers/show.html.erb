@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @cseteacher.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @cseteacher.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @cseteacher.phone %>
+</p>
+
+<p>
+  <b>Photo:</b>
+  <%= @cseteacher.photo %>
+</p>
+
+
+<%= link_to 'Edit', edit_cseteacher_path(@cseteacher) %> |
+<%= link_to 'Back', cseteachers_path %>

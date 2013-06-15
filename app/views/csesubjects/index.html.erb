@@ -1,0 +1,31 @@
+<h1>Listing csesubjects</h1>
+
+<table>
+  <tr>
+    <th>Code</th>
+    <th>Name</th>
+    <th>Lecture</th>
+    <th>Tutorial</th>
+    <th>Practical</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @csesubjects.each do |csesubject| %>
+  <tr>
+    <td><%= csesubject.code %></td>
+    <td><%= csesubject.name %></td>
+    <td><%= csesubject.lecture %></td>
+    <td><%= csesubject.tutorial %></td>
+    <td><%= csesubject.practical %></td>
+    <td><%= link_to 'Show', csesubject %></td>
+    <td><%= link_to 'Edit', edit_csesubject_path(csesubject) %></td>
+    <td><%= link_to 'Destroy', csesubject, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Csesubject', new_csesubject_path %>

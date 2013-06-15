@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Code:</b>
+  <%= @csesubject.code %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @csesubject.name %>
+</p>
+
+<p>
+  <b>Lecture:</b>
+  <%= @csesubject.lecture %>
+</p>
+
+<p>
+  <b>Tutorial:</b>
+  <%= @csesubject.tutorial %>
+</p>
+
+<p>
+  <b>Practical:</b>
+  <%= @csesubject.practical %>
+</p>
+
+
+<%= link_to 'Edit', edit_csesubject_path(@csesubject) %> |
+<%= link_to 'Back', csesubjects_path %>
