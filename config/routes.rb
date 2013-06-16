@@ -1,5 +1,7 @@
 Nith::Application.routes.draw do
 
+  get "home/index"
+
   match 'bcse6s/reset' => "bcse6s#reset"
   match 'bcse6s/recreate' => "bcse6s#recreate"
   match 'bcse6s/right' => "bcse6s#shiftright"
@@ -64,7 +66,7 @@ Nith::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+   root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 
