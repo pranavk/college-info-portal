@@ -1,4 +1,8 @@
-Enter the no. of groups you want the time table to create space for :
+<p>Enter the no. of groups you want the time table to create space for :</p>
+<p><h4>NOTE : </h4>All the previous data will be deleted and a new empty time
+  table will be created. It may take some time, so please be patient. Don't
+  enter number of groups greater than 3-4 if you want to minimise the amount of
+  time it takes to create space.</p>
 
 <%= form_tag('/bcse6s/recreate') do %>
 <%= text_field_tag :noofgroups, nil, :placeholder => "Enter no. of groups here"
