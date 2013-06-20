@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  club: MyString
+  title: MyString
+  description: MyText
+  date: 2013-06-19
+  time: 2013-06-19 14:38:33
+  venue: MyString
+  audience: MyString
+
+two:
+  club: MyString
+  title: MyString
+  description: MyText
+  date: 2013-06-19
+  time: 2013-06-19 14:38:33
+  venue: MyString
+  audience: MyString

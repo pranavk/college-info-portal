@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @club.name %>
+</p>
+
+<p>
+  <b>Logo:</b>
+  <%= @club.logo %>
+</p>
+
+<p>
+  <b>Department:</b>
+  <%= @club.department %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @club.user %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @club.password %>
+</p>
+
+<p>
+  <b>Contact:</b>
+  <%= @club.contact %>
+</p>
+
+<p>
+  <b>Fcoordinator:</b>
+  <%= @club.fcoordinator %>
+</p>
+
+
+<%= link_to 'Edit', edit_club_path(@club) %> |
+<%= link_to 'Back', clubs_path %>

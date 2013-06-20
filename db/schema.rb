@@ -10,13 +10,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130615152606) do
+ActiveRecord::Schema.define(:version => 20130619090901) do
 
   create_table "bcse6s", :force => true do |t|
     t.integer  "csesubject_id"
     t.integer  "cseteacher_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+  end
+
+  create_table "clubs", :force => true do |t|
+    t.string   "name"
+    t.string   "logo"
+    t.string   "department"
+    t.string   "user"
+    t.string   "password"
+    t.string   "salt"
+    t.string   "contact"
+    t.string   "fcoordinator"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "csesubjects", :force => true do |t|
@@ -36,6 +49,18 @@ ActiveRecord::Schema.define(:version => 20130615152606) do
     t.string   "photo"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "events", :force => true do |t|
+    t.string   "club"
+    t.string   "title"
+    t.text     "description"
+    t.date     "date"
+    t.time     "time"
+    t.string   "venue"
+    t.string   "audience"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end

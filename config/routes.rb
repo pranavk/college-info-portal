@@ -1,5 +1,14 @@
 Nith::Application.routes.draw do
 
+  resources :clubs
+
+  match 'events/login' => "events#login"
+  match 'events/login_attempt' => "events#login_attempt"
+  match 'events/logout' => "events#logout"
+
+  resources :events
+
+
   get "home/index"
 
   match 'bcse6s/reset' => "bcse6s#reset"
